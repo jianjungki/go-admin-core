@@ -388,12 +388,14 @@ func (mw *GinJWTMiddleware) MiddlewareInit() error {
 
 // MiddlewareFunc makes GinJWTMiddleware implement the Middleware interface.
 func (mw *GinJWTMiddleware) MiddlewareFunc() gin.HandlerFunc {
+	fmt.Printf("MiddlewareFunc running...\n")
 	return func(c *gin.Context) {
 		mw.middlewareImpl(c)
 	}
 }
 
 func (mw *GinJWTMiddleware) middlewareImpl(c *gin.Context) {
+	fmt.Printf("middlewareImpl running...\n")
 	claims, err := mw.GetClaimsFromJWT(c)
 	if err != nil {
 		mw.unauthorized(c, http.StatusUnauthorized, mw.HTTPStatusMessageFunc(err, c))
