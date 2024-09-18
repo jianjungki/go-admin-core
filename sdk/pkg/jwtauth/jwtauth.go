@@ -506,8 +506,10 @@ func (mw *GinJWTMiddleware) signedString(token *jwt.Token) (string, error) {
 	var tokenString string
 	var err error
 	if mw.usingPublicKeyAlgo() {
+		fmt.Printf("using the privkey\n")
 		tokenString, err = token.SignedString(mw.privKey)
 	} else {
+		fmt.Printf("using the key\n")
 		tokenString, err = token.SignedString(mw.Key)
 	}
 	return tokenString, err
