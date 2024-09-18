@@ -432,6 +432,7 @@ func (mw *GinJWTMiddleware) middlewareImpl(c *gin.Context) {
 // GetClaimsFromJWT get claims from JWT token
 func (mw *GinJWTMiddleware) GetClaimsFromJWT(c *gin.Context) (MapClaims, error) {
 	token, err := mw.ParseToken(c)
+	fmt.Printf("token %+v, err: %v", token, err)
 
 	if err != nil {
 		return nil, err
@@ -684,6 +685,7 @@ func (mw *GinJWTMiddleware) ParseToken(c *gin.Context) (*jwt.Token, error) {
 	}
 
 	if err != nil {
+		fmt.Printf("err: %+v", err)
 		return nil, err
 	}
 
@@ -694,7 +696,7 @@ func (mw *GinJWTMiddleware) ParseToken(c *gin.Context) (*jwt.Token, error) {
 		if mw.usingPublicKeyAlgo() {
 			return mw.pubKey, nil
 		}
-		fmt.Println("token: %+v", token)
+		fmt.Printf("token: %+v", token)
 		c.Set("JWT_TOKEN", token)
 
 		return mw.Key, nil
