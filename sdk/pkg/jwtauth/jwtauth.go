@@ -3,6 +3,7 @@ package jwtauth
 import (
 	"crypto/rsa"
 	"errors"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"strings"
@@ -693,6 +694,7 @@ func (mw *GinJWTMiddleware) ParseToken(c *gin.Context) (*jwt.Token, error) {
 		if mw.usingPublicKeyAlgo() {
 			return mw.pubKey, nil
 		}
+		fmt.Println("token: %+v", token)
 		c.Set("JWT_TOKEN", token)
 
 		return mw.Key, nil
