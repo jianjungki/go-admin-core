@@ -434,7 +434,7 @@ func (mw *GinJWTMiddleware) middlewareImpl(c *gin.Context) {
 // GetClaimsFromJWT get claims from JWT token
 func (mw *GinJWTMiddleware) GetClaimsFromJWT(c *gin.Context) (MapClaims, error) {
 	token, err := mw.ParseToken(c)
-	fmt.Printf("token %+v, err: %v", token, err)
+	fmt.Printf("token %+v, err: %v\n", token, err)
 
 	if err != nil {
 		return nil, err
@@ -663,6 +663,7 @@ func (mw *GinJWTMiddleware) jwtFromParam(c *gin.Context, key string) (string, er
 
 // ParseToken parse jwt token from gin context
 func (mw *GinJWTMiddleware) ParseToken(c *gin.Context) (*jwt.Token, error) {
+	fmt.Printf("ParseToken running\n")
 	var token string
 	var err error
 
@@ -687,10 +688,10 @@ func (mw *GinJWTMiddleware) ParseToken(c *gin.Context) (*jwt.Token, error) {
 	}
 
 	if err != nil {
-		fmt.Printf("err: %+v", err)
+		fmt.Printf("err: %+v\n", err)
 		return nil, err
 	}
-
+	fmt.Printf("ParseToken finish\n")
 	return jwt.Parse(token, func(t *jwt.Token) (interface{}, error) {
 		if jwt.GetSigningMethod(mw.SigningAlgorithm) != t.Method {
 			return nil, ErrInvalidSigningAlgorithm
