@@ -8,14 +8,14 @@ require (
 	github.com/casbin/gorm-adapter/v3 v3.28.0
 	github.com/chanxuehong/wechat v0.0.0-20201110083048-0180211b69fd
 	github.com/gin-gonic/gin v1.10.0
-	github.com/jianjungki/go-admin-core v1.5.3-rc.3
-	github.com/jianjungki/go-admin-core/plugins/logger/zap v0.0.0-20210610020726-2db73adb505d
 	github.com/go-playground/locales v0.14.1
 	github.com/go-playground/universal-translator v0.18.1
 	github.com/go-playground/validator/v10 v10.20.0
 	github.com/golang-jwt/jwt/v4 v4.5.0
 	github.com/google/uuid v1.3.0
 	github.com/gorilla/websocket v1.4.2
+	github.com/jianjungki/go-admin-core v0.0.0-20240918083821-94f813f828fd
+	github.com/jianjungki/go-admin-core/plugins/logger/zap v0.0.0-20240918083821-94f813f828fd
 	github.com/mojocn/base64Captcha v1.3.6
 	github.com/robfig/cron/v3 v3.0.1
 	github.com/shamsher31/goimgext v1.0.0
@@ -81,8 +81,8 @@ require (
 	github.com/tidwall/pretty v1.2.0 // indirect
 	github.com/twitchyliquid64/golang-asm v0.15.1 // indirect
 	github.com/ugorji/go/codec v1.2.12 // indirect
-	go.uber.org/atomic v1.6.0 // indirect
-	go.uber.org/multierr v1.5.0 // indirect
+	go.uber.org/atomic v1.11.0 // indirect
+	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.13.0 // indirect
 	golang.org/x/arch v0.8.0 // indirect
 	golang.org/x/image v0.14.0 // indirect
