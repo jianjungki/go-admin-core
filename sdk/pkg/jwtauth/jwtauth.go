@@ -3,6 +3,7 @@ package jwtauth
 import (
 	"crypto/rsa"
 	"errors"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"strings"
@@ -715,6 +716,7 @@ func (mw *GinJWTMiddleware) unauthorized(c *gin.Context, code int, message strin
 // ExtractClaims help to extract the JWT claims
 func ExtractClaims(c *gin.Context) MapClaims {
 	claims, exists := c.Get(JwtPayloadKey)
+	fmt.Printf("claims: %+v exist: %v", claims, exists)
 	if !exists {
 		return make(MapClaims)
 	}
