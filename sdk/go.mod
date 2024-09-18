@@ -8,10 +8,10 @@ require (
 	github.com/casbin/casbin/v2 v2.54.0
 	github.com/chanxuehong/wechat v0.0.0-20201110083048-0180211b69fd
 	github.com/gin-gonic/gin v1.7.7
-	github.com/jianjungki/go-admin-core v1.3.12-0.20221121065133-27b7dbe27a8f
-	github.com/jianjungki/go-admin-core/plugins/logger/zap v0.0.0-20210610020726-2db73adb505d
-	github.com/jianjungki/gorm-adapter/v3 v3.2.1-0.20210902112335-4148cb356a24
-	github.com/jianjungki/redis-watcher/v2 v2.0.0-20221121052608-058cebff72c2
+	github.com/jianjungki/go-admin-core 9fb988be16d9a5f93e531bd60b57df53359f4365
+	github.com/jianjungki/go-admin-core/plugins/logger/zap 9fb988be16d9a5f93e531bd60b57df53359f4365
+	github.com/go-admin-team/gorm-adapter/v3 v3.2.1-0.20210902112335-4148cb356a24
+	github.com/go-admin-team/redis-watcher/v2 v2.0.0-20221121052608-058cebff72c2
 	github.com/go-admin-team/redisqueue/v2 v2.0.0-20221119141731-97c556b0d5b7
 	github.com/go-playground/locales v0.13.0
 	github.com/go-playground/universal-translator v0.17.0
