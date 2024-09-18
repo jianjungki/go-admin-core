@@ -1,4 +1,4 @@
-module github.com/go-admin-team/go-admin-core/sdk
+module github.com/jianjungki/go-admin-core/sdk
 
 go 1.23
 
@@ -8,8 +8,8 @@ require (
 	github.com/casbin/gorm-adapter/v3 v3.28.0
 	github.com/chanxuehong/wechat v0.0.0-20201110083048-0180211b69fd
 	github.com/gin-gonic/gin v1.10.0
-	github.com/go-admin-team/go-admin-core v1.5.3-rc.3
-	github.com/go-admin-team/go-admin-core/plugins/logger/zap v0.0.0-20210610020726-2db73adb505d
+	github.com/jianjungki/go-admin-core v1.5.3-rc.3
+	github.com/jianjungki/go-admin-core/plugins/logger/zap v0.0.0-20210610020726-2db73adb505d
 	github.com/go-playground/locales v0.14.1
 	github.com/go-playground/universal-translator v0.18.1
 	github.com/go-playground/validator/v10 v10.20.0
@@ -104,4 +104,4 @@ require (
 	modernc.org/sqlite v1.20.3 // indirect
 )
 
-//replace github.com/go-admin-team/go-admin-core => ../
+//replace github.com/jianjungki/go-admin-core => ../

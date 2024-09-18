@@ -1,10 +1,11 @@
 package runtime
 
 import (
-	"github.com/go-admin-team/go-admin-core/storage"
-	"github.com/go-admin-team/go-admin-core/storage/queue"
 	"reflect"
 	"testing"
+
+	"github.com/jianjungki/go-admin-core/storage"
+	"github.com/jianjungki/go-admin-core/storage/queue"
 )
 
 func TestNewMemoryQueue(t *testing.T) {

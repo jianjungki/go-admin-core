@@ -1,8 +1,9 @@
 package queue
 
 import (
-	"github.com/go-admin-team/go-admin-core/storage"
 	"sync"
+
+	"github.com/jianjungki/go-admin-core/storage"
 )
 
 type Message struct {
