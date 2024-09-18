@@ -11,6 +11,7 @@ import (
 
 func ExtractClaims(c *gin.Context) jwt.MapClaims {
 	claims, exists := c.Get(jwt.JwtPayloadKey)
+	fmt.Printf("claims: %+v exists: %v\n", claims, exists)
 	if !exists {
 		return make(jwt.MapClaims)
 	}
